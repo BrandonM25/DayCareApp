@@ -66,13 +66,13 @@
         </nav>
         <!-- Navbar -->
         <!-- Full Page Intro -->
-        <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('../public/images/girl-2480361_1920.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <div id="intro" class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('../public/images/girl-2480361_1920.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
             <!-- Mask & flexbox options-->
             <div class="mask rgba-white-light d-flex justify-content-center align-items-center">
                 <!-- Content -->
                 <div class="container">
                     <!--Grid row-->
-                    <div class="row">
+                    <div class="row" id="mainHeading">
                         <!--Grid column-->
                         <div class="col-md-12 white-text text-left">
                             <h1 class="display-3 mb-0 pt-md-5 pt-5 indigo-text font-weight-bold wow fadeInDown" data-wow-delay="0.3s">DAY CARE
@@ -82,7 +82,7 @@
                             </h5>
                             <div class="wow fadeInDown" data-wow-delay="0.3s">
                                 <a class="btn btn-light-blue btn-lg" id="parentsBtn">parents</a>
-                                <a class="btn btn-indigo btn-lg">staff</a>
+                                <a class="btn btn-indigo btn-lg" id="staffBtn">staff</a>
                             </div>
                         </div>
                         <!--Grid column-->
@@ -150,7 +150,7 @@
 
                     <div class="col-md-6 float-left">
                         <div class="avatar mx-auto">
-                            <img src="http://placeimg.com/640/480/any" class="rounded img-fluid z-depth-1" alt="Second sample avatar image">
+                            <img src="https://avatars2.githubusercontent.com/u/283692?s=400&v=4" class="rounded img-fluid z-depth-1" alt="Second sample avatar image">
                         </div>
                     </div>
 
@@ -301,6 +301,49 @@
 
         </section>
         <!--Section: Team v.3-->
+        <div class="row " id="staffLogIn">
+            <div class="col-lg-4">
+
+                <!-- Card -->
+                <div class="card wow fadeInDown" id="staffLogCard">
+
+                    <!-- Card body -->
+                    <div class="card-body">
+
+
+                        <!-- Material form login -->
+                        <form>
+                            <p class="h4 text-center indigo-text mb-4">Sign in</p>
+
+                            <!-- Material input email -->
+                            <div class="md-form">
+                                <i class="fa fa-envelope prefix indigo-text"></i>
+                                <input type="email" id="materialFormLoginEmailEx" class="form-control">
+                                <label for="materialFormLoginEmailEx">Your email</label>
+                            </div>
+
+                            <!-- Material input password -->
+                            <div class="md-form">
+                                <i class="fa fa-lock prefix indigo-text"></i>
+                                <input type="password" id="materialFormLoginPasswordEx" class="form-control">
+                                <label for="materialFormLoginPasswordEx">Your password</label>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <a href="../public/staff.html"><button class="btn btn-blue accent-1" id="btnLogin" type="submit">Login</button></a>
+                            </div>
+                        </form>
+                        <!-- Material form login -->
+
+
+                    </div>
+                    <!-- Card body -->
+
+                </div>
+                <!-- Card -->
+
+            </div>
+        </div>
 
     </div>
 

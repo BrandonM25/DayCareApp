@@ -1,38 +1,43 @@
-
 /* Required for full background image */
 
-html,
-body,
-header,
-.view {
-  height: 100%;
+html, body, header, .view {
+    height: 100%;
 }
 
 @media (max-width: 740px) {
-  .full-page-intro {
-    height: 100vh;
-  }
+    .full-page-intro {
+        height: 100vh;
+    }
 }
 
 .top-nav-collapse {
-  background-color: #82b1ff !important;
+    background-color: #82b1ff !important;
 }
 
 .navbar:not(.top-nav-collapse) {
-  background: transparent !important;
+    background: transparent !important;
 }
 
 @media (max-width: 768px) {
-  .navbar:not(.top-nav-collapse) {
-    background: #82b1ff !important;
-  }
+    .navbar:not(.top-nav-collapse) {
+        background: #82b1ff !important;
+    }
 }
 
 h5 {
-  letter-spacing: 3px;
+    letter-spacing: 3px;
 }
 
 .jarallax {
-  min-height: auto;
+    min-height: auto;
 }
-        
+
+
+/*#staffLogCard {
+    background: linear-gradient(#82b1ff, #3f51b5);
+}
+*/
+
+#btnLogin {
+    background-color: #82b1ff;
+}
