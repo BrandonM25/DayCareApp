@@ -203,7 +203,7 @@
         </nav>
         <div class="container">
             <div class="row mt-4" id="home">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <!--Card-->
                     <div class="card">
                         <h3 id="tableLable" class="card-header indigo white-text">At A Glance</h3>
@@ -243,87 +243,18 @@
                         <!--/.Card image-->
 
                         <!--Card content-->
-                        <div class="card-body text-left">
+                        <div class="card-body text-left childCard" id="childCard1">
                             <!--Title-->
                             <h4 class="card-title">
-                                <strong>Name:</strong>
+                                <strong>First Name:</strong>
                             </h4>
-
-                            <h5>Age:</h5>
-
-                            <h5>Likes:</h5>
-
-                            <h5>Parent:</h5>
-
-                            <a class="btn btn-unique blue accent-1">Medical Info</a>
-
-                        </div>
-                        <!--/.Card content-->
-
-                    </div>
-                    <!--/.Card Regular-->
-                </div>
-                <div class="col-md-4">
-                    <!--Card Regular-->
-                    <div class="card card-cascade">
-
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <img id="childPic" src="" class="img-fluid" alt="">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <!--/.Card image-->
-
-                        <!--Card content-->
-                        <div class="card-body text-left">
-                            <!--Title-->
                             <h4 class="card-title">
-                                <strong>Name:</strong>
+                                <strong>Last Name:</strong>
                             </h4>
-
-                            <h5>Age:</h5>
-
-                            <h5>Likes:</h5>
-
+                            <h5>Date of Birth:</h5>
+                            <h5>Sex:</h5>
                             <h5>Parent:</h5>
-
-                            <a class="btn btn-unique blue accent-1">Medical Info</a>
-
-                        </div>
-                        <!--/.Card content-->
-
-                    </div>
-                    <!--/.Card Regular-->
-                </div>
-                <div class="col-md-4">
-                    <!--Card Regular-->
-                    <div class="card card-cascade">
-
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <img id="childPic" src="" class="img-fluid" alt="">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <!--/.Card image-->
-
-                        <!--Card content-->
-                        <div class="card-body text-left">
-                            <!--Title-->
-                            <h4 class="card-title">
-                                <strong>Name:</strong>
-                            </h4>
-
-                            <h5>Age:</h5>
-
-                            <h5>Likes:</h5>
-
-                            <h5>Parent:</h5>
-
-                            <a class="btn btn-unique blue accent-1">Medical Info</a>
+                            <a class="btn btn-unique blue accent-1 medBtn">Medical Info</a>
 
                         </div>
                         <!--/.Card content-->
@@ -348,8 +279,8 @@
                                 <br>
 
                                 <!-- Default input email -->
-                                <label for="defaultFormContactEmailEx" class="grey-text">Child's name:</label>
-                                <input type="email" id="defaultFormContactEmailEx" class="form-control">
+                                <label for="defaultFormContactNameEx" class="grey-text">Child's name:</label>
+                                <input type="email" id="defaultFormContactNameEx" class="form-control">
 
                                 <br>
 
@@ -364,7 +295,7 @@
                                 <textarea type="text" id="defaultFormContactMessageEx" class="form-control" rows="3"></textarea>
 
                                 <div class="text-center mt-4">
-                                    <button class="btn btn-primary blue accent-1" type="submit">Button
+                                    <button class="btn btn-primary blue accent-1" type="submit">Submit
                                         <i class="fa fa-paper-plane-o ml-2"></i>
                                     </button>
                                 </div>
@@ -388,6 +319,7 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="../public/js/mdb.min.js"></script>
     <script>
+        new WOW().init();
         $(document).ready(function () {
 
             $('#sidebarCollapse').on('click', function () {
@@ -412,6 +344,47 @@
             $("#children-page").css("display", "none");
             $("#staffNotes").css("display", "");
         });
+
+        $(".medBtn").on('click', function () {
+            let button = $(this);
+            let childCard = button.parent(".childCard")[0];
+
+            let medDiv = jQuery('<div/>', {
+                class: 'card-body text-left animated flipInX medCard'
+            });
+            medDiv.append(` <!--Title-->
+                            <h4 class="card-title">
+                                <strong>Name:</strong>
+                            </h4>
+                            <h5>Allergies:</h5>
+                            <a class="btn btn-unique blue accent-1" id="returnBtn">Return</a>`)
+
+            childCard.replaceWith(medDiv[0]);
+
+            $("#returnBtn").on('click', function () {
+                let button = $(this);
+                let medCard = button.parent('.medCard')[0];
+                console.log(medCard);
+                let childDiv = jQuery('<div/>', {
+                    class: 'card-body text-left animated flipInX childCard'
+                });
+                childDiv.append(`<!--Title-->
+                <h4 class="card-title">
+                    <strong> First Name:</strong>
+                    </h4>
+                    <h4 class="card-title">
+                        <strong> Last Name:</strong>
+                        </h4>
+                        <h5>Date of Birth:</h5>
+                        <h5>Sex:</h5>
+                        <h5>Parent:</h5>
+                        <a class="btn btn-unique blue accent-1 medBtn">Medical Info</a>`)
+                medCard.replaceWith(childDiv[0]);
+            });
+        });
+
+
+
 
     </script>
 
