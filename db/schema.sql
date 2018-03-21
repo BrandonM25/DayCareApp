@@ -55,7 +55,7 @@ parent1_id VARCHAR(30) NOT NULL,
   -- Makes a boolean column called "allergies" which cannot contain null --
 parent2_id VARCHAR(30) NULL,
   -- Makes a boolean column called "allergies" which cannot contain null --
-allergies BOOLEAN NOT NULL,
+allergies ENUM('Y', 'N') NOT NULL,
   -- Makes a string column called "allergy1" which can contain null --
 allergy1 VARCHAR(30)  NULL,
   -- Makes a string column called "allergy2" which can contain null --

@@ -23,14 +23,9 @@ var orm = {
       cb(result);
     });
 
-    //  connection.query("INSERT INTO parents (username, password, first_name, last_name, spouse_id, email, street, city, state, zip, phone, emergency_name, emergency_phnum) values ('Anisha','test','test','test', 1, 'test','test','test','tt',3009, 770-122-3312, 'test','test')", function (err, result) {
-    //   // if any error while executing above query, throw error
-    //   if (err) throw err;
-    //   // if there is no error, you have the result
-    //   console.log(result);
-    // });
   }
 
+  
 
 }
 

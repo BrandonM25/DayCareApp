@@ -8,12 +8,10 @@ var path = require("path");
 
 var registration = require("../models/children.js");
 
-// var connection = require("../config/connection.js");
-
 router.post("/api/register", function(req, res) {
 
 
-    registration.create([
+    registration.createParent([
       "username", "password", "first_name", "last_name", "email", "street", "city", "state", "zip", "phone", "emergency_name", "emergency_phnum"
       ], 
 
@@ -46,24 +44,43 @@ router.post("/api/register", function(req, res) {
       // Send back the ID of the new quote
       res.json({ id: result.insertId });
     });
-   // make to connection to the database.
 
-    // if connection is successful
-    // connection.query("INSERT INTO parents (username, password, first_name, last_name, spouse_id, email, street, city, state, zip, phone, emergency_name, emergency_phnum) values ('Anisha','test','test','test', 1, 'test','test','test','tt',3009, 770-122-3312, 'test','test')", function (err, result) {
-    //   // if any error while executing above query, throw error
-    //   if (err) throw err;
-    //   // if there is no error, you have the result
-    //   console.log(result);
-    // });
- 
-
-  // console.log('hey');
-  // console.log(req.body.password);
   console.log(req.body);
-  // registration.create(["password", "username"], [req.body.password, req.body.username], function(result) {
-  //   // Send back the ID of the new quote
-  //   res.json({ id: result.insertId });
-  // });
+
+});
+
+router.post("/api/child", function(req, res) {
+
+
+    registration.createChild([
+      "first_name", "last_name", "birth_date", "sex", "allergies", "allergy1", "allergy2"
+      ], 
+
+      [
+
+      // _________________________________________________________ 
+
+       "'" + req.body.first_name + "'", "'" + req.body.last_name + "'",
+
+       // _________________________________________________________  
+
+        req.body.birth_date, 
+
+       // _________________________________________________________ 
+
+       "'" + req.body.sex + "'", "'" + req.body.allergies + "'", 
+
+       // _________________________________________________________ 
+
+       "'" + req.body.allergy1 + "'", "'" + req.body.allergy2 + "'"
+       
+      ], function(result) {
+      // Send back the ID of the new quote
+      res.json({ id: result.insertId });
+    });
+
+  console.log(req.body);
+
 });
 
 

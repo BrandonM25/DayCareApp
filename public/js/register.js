@@ -26,7 +26,7 @@
       event.preventDefault();
 
       // Here we grab the form elements
-      var newChild = {
+      var newParent = {
         password: $('#password').val().trim(),
         username: $('#username').val().trim(),
         first_name: $('#fParent').val().trim(),
@@ -48,16 +48,29 @@
         spouseAddress: $("#spouseAddress").val().trim(),
         spouseCity: $("#spouseCity").val().trim(),
         spouseState: $("#spouseState").val().trim(),
-        spouseZip: $("#spouseZip").val().trim()
-
+        spouseZip: $("#spouseZip").val().trim(),
+        
       };
 
+      var newChild = {
+
+        first_name: $("#fchild").val().trim(),
+        last_name: $("#lchild").val().trim(),
+        birth_date: $("#birthDate").val().trim(),
+        sex: $("#sexChild").val().trim(),
+        allergies: $("#allergy1").val().trim(),
+        allergy1: $("#allergy2").val().trim(),
+        allergy2: $("#allergy3").val().trim()
+
+      }
+
       console.log(newChild);
+      console.log(newParent);
 
       // Send the POST request.
       $.ajax("/api/register", {
         type: "POST",
-        data: newChild
+        data: newParent
       }).then(
         function() {
           console.log("You are registered");
@@ -84,7 +97,33 @@
           $("#spouseAddress").val(""),
           $("#spouseCity").val(""),
           $("#spouseState").val(""),
-          $("#spouseZip").val("")
+          $("#spouseZip").val(""),
+          $("#fchild").val(""),
+          $("#lchild").val(""),
+          $("#birthDate").val(""),
+          $("#sexChild").val(""),
+          $("#allergy1").val(""),
+          $("#allergy2").val(""),
+        $("#allergy3").val('')
+        }
+      );
+
+      $.ajax("/api/child", {
+        type: "POST",
+        data: newChild
+      }).then(
+        function() {
+          console.log("You are registered");
+          // Reload the page to get the updated list
+          location.reload();
+
+          $("#fchild").val(""),
+          $("#lchild").val(""),
+          $("#birthDate").val(""),
+          $("#sexChild").val(""),
+          $("#allergy1").val(""),
+          $("#allergy2").val(""),
+        $("#allergy3").val('')
         }
       );
 
