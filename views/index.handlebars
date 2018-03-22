@@ -1,0 +1,34 @@
+<div class="card-body text-left childCard">
+{{#each children}}
+<h4 class="card-title"><strong>{{first_name}}</strong>""<strong>{{last_name}}</strong></h4>
+<h5>Parents: <strong>{{first_name}}</strong>""<strong>{{last_name}}</strong></h5>
+<h5>Birthdate: {{birth_date}}</h5>
+<h5>Sex: {{sex}}</h5>
+<a class="btn btn-unique blue accent-1 medBtn">Medical Info</a>
+<h1>Medical Information</h1>
+<h5>Allergies: {{allergy1}}</h5>
+<h5>Allergies: {{allergy2}}</h5>
+{{/each}}
+</div>
+
+
+
+<ul>
+{{#each children}}
+<h1>Medical Information</h1>
+<p>Allergies: {{allergy1}}</p>
+<p>Allergies: {{allergy2}}</p>
+{{/each}}
+</ul>
+
+<div class="card-body text-left childCard" id="childCard1">
+///Title
+<h4 class="card-title"><strong>First Name:</strong></h4>
+<h4 class="card-title"><strong>Last Name:</strong></h4>
+<h5>Date of Birth:</h5>
+<h5>Sex:</h5>
+<h5>Parent:</h5>
+<a class="btn btn-unique blue accent-1 medBtn">Medical Info</a>
+</div>
+
+

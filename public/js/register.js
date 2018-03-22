@@ -60,7 +60,8 @@
         sex: $("#sexChild").val().trim(),
         allergies: $("#allergy1").val().trim(),
         allergy1: $("#allergy2").val().trim(),
-        allergy2: $("#allergy3").val().trim()
+        allergy2: $("#allergy3").val().trim(),
+        parent1_id: $("#parent1_id").val().trim()
 
       }
 
@@ -124,6 +125,7 @@
           $("#allergy1").val(""),
           $("#allergy2").val(""),
         $("#allergy3").val('')
+          $("#parent1_id").val('')
         }
       );
 
