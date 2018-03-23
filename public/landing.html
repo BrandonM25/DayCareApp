@@ -9,11 +9,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
-    <link href="../public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
-    <link href="../public/css/mdb.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Our custom styles -->
-    <link href="../public/css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -32,12 +32,12 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link indigo-text" href="#">Home
+                            <a class="nav-link indigo-text" href="../public/landing.html">Home
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link indigo-text" href="#">About</a>
+                            <a class="nav-link indigo-text" href="#" id="aboutTab">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link indigo-text" href="#">Contact</a>
@@ -64,7 +64,7 @@
         </nav>
         <!-- Navbar -->
         <!-- Full Page Intro -->
-        <div id="intro" class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('../public/images/girl-2480361_1920.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <div id="intro" class="view jarallax wow fadeIn" data-jarallax='{"speed": 0.2}' style="background-image: url('../public/images/girl-2480361_1920.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
             <!-- Mask & flexbox options-->
             <div class="mask rgba-white-light d-flex justify-content-center align-items-center">
                 <!-- Content -->
@@ -295,7 +295,7 @@
                             </div>
 
                             <div class="text-center mt-4">
-                                <a href="">
+                                <a href="../public/staff.html">
                                     <button class="btn btn-blue accent-1" id="btnLogin" type="submit">Login</button>
                                 </a>
                             </div>
@@ -329,8 +329,16 @@
                                 <label for="materialFormLoginPasswordEx">Your password</label>
                             </div>
                             <div class="text-center mt-4">
-                                <a href="">
+                                <a href="../public/parents.html">
                                     <button class="btn btn-blue accent-1" id="btnLogin" type="submit">Login</button>
+                                </a>
+                            </div>
+                            <div class="text-center mt-4">
+                                Or
+                            </div>
+                            <div class="text-center mt-4">
+                                <a href="../public/register.html">
+                                    <button class="btn btn-blue accent-1" id="btnLogin" type="submit">Register</button>
                                 </a>
                             </div>
                         </form>
@@ -342,8 +350,85 @@
             </div>
         </div>
         <!-- About Section-->
-        
-
+        <section>
+            <div class="row wow fadeInDown" id="purpose">
+                <div class="col-md-6">
+                    <div class="card">
+                        <h3 id="tableLable" class="card-header indigo white-text">Purpose</h3>
+                        <div id="topTable" class="card-body">
+                            <h6>Our goal is to create an application that the parent and staff can use to communicate and store
+                                profiles on each party.</h6>
+                            <a class="btn btn-light-blue btn-lg" id="next1">Next</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row wow fadeInDown" id="motivation">
+                <div class="col-md-6">
+                    <div class="card">
+                        <h3 id="tableLable" class="card-header indigo white-text">Motivation</h3>
+                        <div id="topTable" class="card-body">
+                            <h6>Churches have a hard time with communicating with parents who have kids in day care. Staff scheduling
+                                issues.
+                            </h6>
+                            <a class="btn btn-light-blue btn-lg" id="next2">Next</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row wow fadeInDown" id="components">
+                <div class="col-md-6">
+                    <div class="card">
+                        <h3 id="tableLable" class="card-header indigo white-text">Components</h3>
+                        <div id="topTable" class="card-body">
+                            <ul>
+                                <li>Parent Portal</li>
+                                <ul>
+                                    <li>Register Child.</li>
+                                    <li>Communicate with day care staff.</li>
+                                </ul>
+                                <li>Staff Portal</li>
+                                <ul>
+                                    <li>Staff on-duty check in/out.</li>
+                                    <li>List of children in day care.</li>
+                                    <li>View the profile card of each child attending day care.</li>
+                                    <li>Notify Parents of any behavioral or medical issues.</li>
+                                </ul>
+                            </ul>
+                            <a class="btn btn-light-blue btn-lg" id="next3">Next</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row wow fadeInDown" id="designProcess">
+                <div class="col-md-6">
+                    <div class="card">
+                        <h3 id="tableLable" class="card-header indigo white-text">Design Process</h3>
+                        <div id="topTable" class="card-body">
+                            <h6>Lorem ipsum dolor sit amet.</h6>
+                            <a class="btn btn-light-blue btn-lg" id="next4">Next</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row wow fadeInDown" id="technologies">
+                <div class="col-md-6">
+                    <div class="card">
+                        <h3 id="tableLable" class="card-header indigo white-text">Technologies Used</h3>
+                        <div id="topTable" class="card-body">
+                            <ul>
+                                <li>Bootstrap</li>
+                                <li>MySQL</li>
+                                <li>NodeJs</li>
+                                <li>Sequelize</li>
+                                <li>Handlebars</li>
+                                <li>Express</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
 

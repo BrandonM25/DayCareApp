@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
     <!-- Font Awesome -->
-    
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/css/mdb.min.css" rel="stylesheet">
 
     <style type="text/css">
         body {
@@ -183,7 +182,7 @@
             <!-- Sidebar Links -->
             <ul class="list-unstyled components active">
                 <li>
-                    <a href="" id="homeTab">
+                    <a href="#" id="homeTab">
                         <i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a>
 
                 </li>
@@ -233,37 +232,7 @@
             </div>
             <div class="row mt-4" id="children-page">
                 <div class="col-md-4">
-                    <!--Card Regular-->
-                    <div class="card card-cascade">
-
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <img id="childPic" src="" class="img-fluid" alt="">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <!--/.Card image-->
-
-                        <!--Card content-->
-                        <div class="card-body text-left childCard" id="childCard1">
-                            <!--Title-->
-                            <h4 class="card-title">
-                                <strong>First Name:{{first_name}}</strong>
-                            </h4>
-                            <h4 class="card-title">
-                                <strong>Last Name:</strong>
-                            </h4>
-                            <h5>Date of Birth:</h5>
-                            <h5>Sex:</h5>
-                            <h5>Parent:</h5>
-                            <a class="btn btn-unique blue accent-1 medBtn">Medical Info</a>
-
-                        </div>
-                        <!--/.Card content-->
-
-                    </div>
-                    <!--/.Card Regular-->
+                   {{{body}}}
                 </div>
             </div>
             <div class="row mt-4" id="staffNotes">
@@ -322,7 +291,7 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
     <script>
-        new WOW().init();
+
         $(document).ready(function () {
 
             $('#sidebarCollapse').on('click', function () {
@@ -336,14 +305,14 @@
 
         $("#childTab").on('click', function () {
 
-            $("#home").replaceWith($('#children-page'));
+            $("#home").replaceWith(jQuery('#children-page'));
             $("#staffNotes").css("display", "none");
             $("#children-page").css("display", "");
         });
 
         $("#staffTab").on('click', function () {
 
-            $("#home").replaceWith($('#staffNotes'));
+            $("#home").replaceWith(jQuery('#staffNotes'));
             $("#children-page").css("display", "none");
             $("#staffNotes").css("display", "");
         });
@@ -361,10 +330,10 @@
             });
             medDiv.append(` <!--Title-->
                             <h4 class="card-title">
-                                <strong> First Name:</strong>
+                                <strong>First Name:</strong>
                             </h4>
                             <h4 class="card-title">
-                                <strong> Last Name:</strong>
+                                <strong>Last Name:</strong>
                             </h4>
                             <h5>Allergies:</h5>
                             <h5>Allergies:</h5>
