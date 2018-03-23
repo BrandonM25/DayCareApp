@@ -79,6 +79,17 @@ router.post("/api/child", function(req, res) {
 
     });
 
+    // registration.pushParent(
+    //   [
+    //     "username",
+    //   ], 
+    //   function(result) {
+
+    //     // Send back the ID of the new quote
+    //     res.json({ id: result.insertId });
+
+    //   })
+
 
 
 });

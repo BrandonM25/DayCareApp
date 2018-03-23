@@ -35,15 +35,29 @@ var orm = {
     });
   },
 
-  // push: function(table1,col,table2,t1,t2,cb){
-  //   var queryString = "UPDATE" + table1 + "SET" + col + "FROM" + table2 + "WHERE" + t1 + "and" + t2 + ";"
-  //   connection.query(queryString, function(err, result) {
-  //     if (err) {
-  //       throw err;
-  //     }
-  //     cb(result);
-  //   });
-  // }
+//   push: function(colname,table2,cb){
+//     var queryString = "INSERT INTO " + children + "(" + parent1_id + ")";
+
+    
+//     // queryString += cols;
+//     // queryString += ".";
+//     queryString += " SELECT ";
+//     queryString += colname;
+//     queryString += " FROM ";
+//     queryString += table2;
+//     // queryString += " WHERE ";
+//     // queryString += val;
+
+// //         var queryString = INSERT INTO children (parent1_id)
+// // SELECT id FROM Parents;
+
+//     connection.query(queryString, function(err, result) {
+//       if (err) {
+//         throw err;
+//       }
+//       cb(result);
+//     });
+//   }
 
   
 

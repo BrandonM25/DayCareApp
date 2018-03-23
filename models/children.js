@@ -24,7 +24,21 @@ var registration = {
     orm.all("children", function(res) {
       cb(res);
     });
-  }
+  },
+
+  // pushParent: function(colname,cb){
+  // 	 orm.push(colname, "Parents", function(res) {
+  //     cb(res);
+  //   });
+
+  // 	 console.log(orm.push());
+
+
+  // }
+
+   // var queryString = "INSERT INTO" + table1 + "VALUES" + col + "SELECT" + colname + "FROM" + table2 + ";"
+
+    // var queryString = "INSERT INTO" + children + "VALUES" + parent1_id + "SELECT" + id + "FROM" + Parents + ";"
 
 }
 
