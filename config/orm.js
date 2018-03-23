@@ -33,7 +33,17 @@ var orm = {
       }
       cb(result);
     });
-  }
+  },
+
+  // push: function(table1,col,table2,t1,t2,cb){
+  //   var queryString = "UPDATE" + table1 + "SET" + col + "FROM" + table2 + "WHERE" + t1 + "and" + t2 + ";"
+  //   connection.query(queryString, function(err, result) {
+  //     if (err) {
+  //       throw err;
+  //     }
+  //     cb(result);
+  //   });
+  // }
 
   
 

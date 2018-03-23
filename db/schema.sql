@@ -38,6 +38,7 @@ emergency_phnum VARCHAR(30) NULL,
 date_entered TIMESTAMP,
 
 PRIMARY KEY (id)
+
 );
 
 CREATE TABLE children (

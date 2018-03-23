@@ -12,8 +12,19 @@ var registration = {
     orm.create("children", cols, vals, function(res) {
       cb(res);
     });
-  }
+  },
+  
+  allParent: function(cb) {
+    orm.all("Parents", function(res) {
+      cb(res);
+    });
+  },
 
+   allChild: function(cb) {
+    orm.all("children", function(res) {
+      cb(res);
+    });
+  }
 
 }
 
