@@ -18,7 +18,7 @@ first_name VARCHAR(30) NOT NULL,
   -- Makes a string column called "last_name" which cannot contain null --
 last_name VARCHAR(30) NOT NULL,
   -- Makes a string column called "first_name" which cannot contain null --
-spouse_id int null,
+-- spouse_id int null,
   -- Makes a string column called "number of children" which cannot contain null --
 email VARCHAR(60) NULL,
   -- Makes a string column called "street" which cannot contain null --
@@ -54,7 +54,7 @@ sex ENUM('M', 'F') NOT NULL,
   -- Makes a string column called "parent ID" which cannot contain null --
 parent1_id VARCHAR(30) NOT NULL,
   -- Makes a boolean column called "allergies" which cannot contain null --
-parent2_id VARCHAR(30) NULL,
+-- parent2_id VARCHAR(30) NULL,
   -- Makes a boolean column called "allergies" which cannot contain null --
 allergies ENUM('Y', 'N') NOT NULL,
   -- Makes a string column called "allergy1" which can contain null --

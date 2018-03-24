@@ -2,9 +2,7 @@ var express = require("express");
 
 var router = express.Router();
 
-var app = express();
 
-var path = require("path");
 
 var registration = require("../models/children.js");
 
@@ -42,7 +40,7 @@ router.post("/api/register", function(req, res) {
 
       function(result) {
       // Send back the ID of the new quote
-      res.json({ id: result.insertId });
+      res.json(result);
     });
 
   
@@ -127,6 +125,7 @@ router.get("/api/child", function(req, res) {
 
 
 console.log(registration);
+
 
 
 // Export routes for server.js to use.

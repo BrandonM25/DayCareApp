@@ -1,26 +1,3 @@
-    
-  // $(".create-form").on("submit", function(event) {
-  //   // Make sure to preventDefault on a submit event.
-  //   event.preventDefault();
-
-  //   var newCat = {
-  //     name: $("#ca").val().trim(),
-  //     sleepy: $("[name=sleepy]:checked").val().trim()
-  //   };
-
-  //   // Send the POST request.
-  //   $.ajax("/api/cats", {
-  //     type: "POST",
-  //     data: newCat
-  //   }).then(
-  //     function() {
-  //       console.log("created new cat");
-  //       // Reload the page to get the updated list
-  //       location.reload();
-  //     }
-  //   );
-  // });
-    
 
     $(".submit").on("click", function(event) {
       event.preventDefault();
@@ -41,14 +18,14 @@
         emergency_last: $("#lemerg").val().trim(),
         emergency_phnum: $("#emergNumber").val().trim(),
         
-        spouseFirst: $("#fSpouse").val().trim(),
-        spouseLast: $("#lSpouse").val().trim(),
-        spouseEmail: $("#spouseEmail").val().trim(),
-        spouseNumber: $("#spouseNumber").val().trim(),
-        spouseAddress: $("#spouseAddress").val().trim(),
-        spouseCity: $("#spouseCity").val().trim(),
-        spouseState: $("#spouseState").val().trim(),
-        spouseZip: $("#spouseZip").val().trim(),
+        // spouseFirst: $("#fSpouse").val().trim(),
+        // spouseLast: $("#lSpouse").val().trim(),
+        // spouseEmail: $("#spouseEmail").val().trim(),
+        // spouseNumber: $("#spouseNumber").val().trim(),
+        // spouseAddress: $("#spouseAddress").val().trim(),
+        // spouseCity: $("#spouseCity").val().trim(),
+        // spouseState: $("#spouseState").val().trim(),
+        // spouseZip: $("#spouseZip").val().trim(),
         
       };
 
@@ -61,23 +38,9 @@
         allergies: $("#allergy1").val().trim(),
         allergy1: $("#allergy2").val().trim(),
         allergy2: $("#allergy3").val().trim(),
-        parent1_id: $("#parent1_id").val().trim()
+        // parent1_id: $("#parent1_id").val().trim()
 
       }
-
-      console.log(newChild);
-      console.log(newParent);
-
-      // Send the POST request.
-      $.ajax("/api/register", {
-        type: "POST",
-        data: newParent
-      }).then(
-        function() {
-          console.log("You are registered");
-          // Reload the page to get the updated list
-          location.reload();
-
           $('#password').val(""),
           $('#username').val(""),
           $("#fparent").val(""),
@@ -91,43 +54,57 @@
           $("#femerg").val(""),
           $("#lemerg").val(""),
           $("#emergNumber").val(""),
-          $("#fSpouse").val(""),
-          $("#lSpouse").val(""),
-          $("#spouseEmail").val(""),
-          $("#spouseNumber").val(""),
-          $("#spouseAddress").val(""),
-          $("#spouseCity").val(""),
-          $("#spouseState").val(""),
-          $("#spouseZip").val(""),
+          // $("#fSpouse").val(""),
+          // $("#lSpouse").val(""),
+          // $("#spouseEmail").val(""),
+          // $("#spouseNumber").val(""),
+          // $("#spouseAddress").val(""),
+          // $("#spouseCity").val(""),
+          // $("#spouseState").val(""),
+          // $("#spouseZip").val(""),
           $("#fchild").val(""),
           $("#lchild").val(""),
           $("#birthDate").val(""),
           $("#sexChild").val(""),
           $("#allergy1").val(""),
           $("#allergy2").val(""),
-        $("#allergy3").val('')
-        }
-      );
-
-      $.ajax("/api/child", {
-        type: "POST",
-        data: newChild
-      }).then(
-        function() {
-          console.log("You are registered");
-          // Reload the page to get the updated list
-          location.reload();
-
+          $("#allergy3").val('')
           $("#fchild").val(""),
           $("#lchild").val(""),
           $("#birthDate").val(""),
           $("#sexChild").val(""),
           $("#allergy1").val(""),
           $("#allergy2").val(""),
-        $("#allergy3").val('')
+          $("#allergy3").val('')
           $("#parent1_id").val('')
+           // Send the POST request.
+      $.ajax("/api/register", {
+        type: "POST",
+        data: newParent
+      }).then(
+        function(data) {
+          console.log("You are registered ",data);
+          // Reload the page to get the updated list
+          // location.reload();
+
+            $.ajax("/api/child", {
+            type: "POST",
+            //spread operator
+            data: {...newChild, parent1_id:data.insertId}
+          }).then(
+            function(data) {
+              console.log("You registered child",data);
+              // Reload the page to get the updated list
+              // location.reload();
+
+
+            }
+          );
+
         }
       );
+
+
 
       });
 

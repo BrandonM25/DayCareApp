@@ -35,31 +35,12 @@ var orm = {
     });
   },
 
-//   push: function(colname,table2,cb){
-//     var queryString = "INSERT INTO " + children + "(" + parent1_id + ")";
+//   staffData: function(,cb){
+//     var queryString = "SELECT " + daycare_db.Parents.first_name, daycare_db.Parents.last_name, daycare_db.children.first_name, daycare_db.children.last_name, daycare_db.children.birth_date
+// FROM daycare_db.Parents
+// INNER JOIN daycare_db.children 
 
-    
-//     // queryString += cols;
-//     // queryString += ".";
-//     queryString += " SELECT ";
-//     queryString += colname;
-//     queryString += " FROM ";
-//     queryString += table2;
-//     // queryString += " WHERE ";
-//     // queryString += val;
-
-// //         var queryString = INSERT INTO children (parent1_id)
-// // SELECT id FROM Parents;
-
-//     connection.query(queryString, function(err, result) {
-//       if (err) {
-//         throw err;
-//       }
-//       cb(result);
-//     });
 //   }
-
-  
 
 }
 
