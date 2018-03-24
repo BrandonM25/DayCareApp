@@ -18,7 +18,7 @@ first_name VARCHAR(30) NOT NULL,
   -- Makes a string column called "last_name" which cannot contain null --
 last_name VARCHAR(30) NOT NULL,
   -- Makes a string column called "first_name" which cannot contain null --
-spouse_id int null,
+-- spouse_id int null,
   -- Makes a string column called "number of children" which cannot contain null --
 email VARCHAR(60) NULL,
   -- Makes a string column called "street" which cannot contain null --
@@ -38,6 +38,7 @@ emergency_phnum VARCHAR(30) NULL,
 date_entered TIMESTAMP,
 
 PRIMARY KEY (id)
+
 );
 
 CREATE TABLE children (
@@ -53,9 +54,9 @@ sex ENUM('M', 'F') NOT NULL,
   -- Makes a string column called "parent ID" which cannot contain null --
 parent1_id VARCHAR(30) NOT NULL,
   -- Makes a boolean column called "allergies" which cannot contain null --
-parent2_id VARCHAR(30) NULL,
+-- parent2_id VARCHAR(30) NULL,
   -- Makes a boolean column called "allergies" which cannot contain null --
-allergies BOOLEAN NOT NULL,
+allergies ENUM('Y', 'N') NOT NULL,
   -- Makes a string column called "allergy1" which can contain null --
 allergy1 VARCHAR(30)  NULL,
   -- Makes a string column called "allergy2" which can contain null --
