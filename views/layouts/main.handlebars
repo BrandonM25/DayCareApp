@@ -1,13 +1,372 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-		<title>staff page</title>
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="/public/js/register.js"></script>
-	</head>
-	<body>
-		{{{ body }}}
-	</body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/css/mdb.min.css" rel="stylesheet">
+
+    <style type="text/css">
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fafafa;
+        }
+
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1em;
+            font-weight: 300;
+            line-height: 1.7em;
+            color: #999;
+        }
+
+        a,
+        a:hover,
+        a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        #sidebar {
+            /* don't forget to add all the previously mentioned styles here too */
+            background: #3f51b5;
+            color: #fff;
+            transition: all 0.3s;
+        }
+
+        #sidebar .sidebar-header {
+            padding: 20px;
+            background: #6d7fcc;
+        }
+
+        #sidebar ul.components {
+            padding: 20px 0;
+            border-bottom: 1px solid #47748b;
+        }
+
+        #sidebar ul p {
+            color: #fff;
+            padding: 10px;
+        }
+
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1.1em;
+            display: block;
+        }
+
+        #sidebar ul li a:hover {
+            color: #7386D5;
+            background: #fff;
+        }
+
+        #sidebar ul li.active>a,
+        a[aria-expanded="true"] {
+            color: #fff;
+            background: #6d7fcc;
+        }
+
+        ul ul a {
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+            background: #6d7fcc;
+        }
+
+        .wrapper {
+            display: flex;
+            align-items: stretch;
+        }
+
+        #sidebar {
+            min-width: 250px;
+            max-width: 250px;
+            min-height: 100vh;
+        }
+
+        #sidebar.active {
+            margin-left: -250px;
+        }
+
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+
+
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -250px;
+            }
+            #sidebar.active {
+                margin-left: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark indigo">
+
+        <!-- Toggle Button -->
+        <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn blue accent-1">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+
+            </ul>
+            <!-- Links -->
+
+            <span class="navbar-text white-text">
+                <ul>
+                    <!-- Facebook -->
+                    <a class="icons-sm fb-ic">
+                        <i class="fa fa-facebook white-text"> </i>
+                    </a>
+                    <!-- Twitter -->
+                    <a class="icons-sm tw-ic">
+                        <i class="fa fa-twitter white-text"> </i>
+                    </a>
+                    <!-- Instagram -->
+                    <a class="icons-sm ins-ic">
+                        <i class="fa fa-instagram white-text"> </i>
+                    </a>
+                </ul>
+            </span>
+        </div>
+        <!-- Collapsible content -->
+
+    </nav>
+    <!--/.Navbar-->
+    <div class="wrapper">
+        <nav id="sidebar" class="text-center">
+            <!-- Sidebar Header -->
+            <div class="sidebar-header">
+                <h3>DAY CARE APP</h3>
+                <h5>Staff Section</h5>
+            </div>
+
+            <!-- Sidebar Links -->
+            <ul class="list-unstyled components active">
+                <li>
+                    <a href="#" id="homeTab">
+                        <i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a>
+
+                </li>
+                <hr class="my-4">
+                <li>
+                    <a href="#" id="childTab">
+                        <i class="fa fa-cube fa-2x" aria-hidden="true"></i> Children</a>
+                </li>
+                <hr class="my-4">
+                <li>
+                    <a href="#" id="staffTab">
+                        <i class="fa fa-edit fa-2x" aria-hidden="true"></i> Staff Notes</a>
+                </li>
+                <hr class="my-4">
+                <li>
+                    <a href="#" id="contactTab">
+                        <i class="fa fa-phone fa-2x" aria-hidden="true"></i> Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="row mt-4" id="home">
+                <div class="col-md-12">
+                    <!--Card-->
+                    <div class="card">
+                        <h3 id="tableLable" class="card-header indigo white-text">AT A GLANCE</h3>
+                        <div id="topTable" class="card-body">
+
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Children Checked In:
+                                    <span class="badge badge-primary badge-pill">14</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Staff On Duty:
+                                    <span class="badge badge-primary badge-pill">2</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Issues:
+                                    <span class="badge badge-primary badge-pill">1</span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4" id="children-page">
+                <div class="col-md-4">
+                   {{{body}}}
+                </div>
+            </div>
+            <div class="row mt-4" id="staffNotes">
+                <div class="col-md-12">
+                    <div class="card">
+                        <h3 id="tableLable" class="card-header indigo white-text">Staff Notes</h3>
+                        <div id="topTable" class="card-body">
+
+                            <!-- Default form contact -->
+                            <form>
+
+                                <!-- Default input name -->
+                                <label for="defaultFormContactNameEx" class="grey-text">Your name:</label>
+                                <input type="text" id="defaultFormContactNameEx" class="form-control">
+
+                                <br>
+
+                                <!-- Default input email -->
+                                <label for="defaultFormContactNameEx" class="grey-text">Child's name:</label>
+                                <input type="email" id="defaultFormContactNameEx" class="form-control">
+
+                                <br>
+
+                                <!-- Default input subject -->
+                                <label for="defaultFormContactSubjectEx" class="grey-text">Subject:</label>
+                                <input type="text" id="defaultFormContactSubjectEx" class="form-control">
+
+                                <br>
+
+                                <!-- Default textarea message -->
+                                <label for="defaultFormContactMessageEx" class="grey-text">Your message:</label>
+                                <textarea type="text" id="defaultFormContactMessageEx" class="form-control" rows="3"></textarea>
+
+                                <div class="text-center mt-4">
+                                    <button class="btn btn-primary blue accent-1" type="submit">Submit
+                                        <i class="fa fa-paper-plane-o ml-2"></i>
+                                    </button>
+                                </div>
+                            </form>
+                            <!-- Default form contact -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Scripts-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+
+        });
+
+        $("#children-page").css("display", "none");
+        $("#staffNotes").css("display", "none");
+
+        $("#childTab").on('click', function () {
+
+            $("#home").replaceWith(jQuery('#children-page'));
+            $("#staffNotes").css("display", "none");
+            $("#children-page").css("display", "");
+        });
+
+        $("#staffTab").on('click', function () {
+
+            $("#home").replaceWith(jQuery('#staffNotes'));
+            $("#children-page").css("display", "none");
+            $("#staffNotes").css("display", "");
+        });
+
+        $("#homeTab").on('click', function(){
+            $("#home").css("display", "");
+        });
+
+        $(".medBtn").on('click', function () {
+            let button = $(this);
+            let childCard = button.parent(".childCard")[0];
+
+            let medDiv = jQuery('<div/>', {
+                class: 'card-body text-left animated flipInX medCard'
+            });
+            medDiv.append(` <!--Title-->
+                            <h4 class="card-title">
+                                <strong>First Name:</strong>
+                            </h4>
+                            <h4 class="card-title">
+                                <strong>Last Name:</strong>
+                            </h4>
+                            <h5>Allergies:</h5>
+                            <h5>Allergies:</h5>
+                            <a class="btn btn-unique blue accent-1" id="returnBtn">Return</a>`)
+
+            childCard.replaceWith(medDiv[0]);
+
+            $("#returnBtn").on('click', function () {
+                let button = $(this);
+                let medCard = button.parent('.medCard')[0];
+                console.log(medCard);
+                let childDiv = jQuery('<div/>', {
+                    class: 'card-body text-left animated flipInX childCard'
+                });
+                childDiv.append(`<!--Title-->
+                <h4 class="card-title">
+                    <strong> First Name:</strong>
+                    </h4>
+                    <h4 class="card-title">
+                        <strong> Last Name:</strong>
+                        </h4>
+                        <h5>Date of Birth:</h5>
+                        <h5>Sex:</h5>
+                        <h5>Parent:</h5>
+                        <a class="btn btn-unique blue accent-1 medBtn">Medical Info</a>`)
+                medCard.replaceWith(childDiv[0]);
+            });
+        });
+
+
+
+
+    </script>
+
+</body>
+
+
 </html>
