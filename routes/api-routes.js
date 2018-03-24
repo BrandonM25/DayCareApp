@@ -110,6 +110,8 @@ router.get("/api/parent", function(req, res) {
   registration.allParent(function(result) {
 
     res.json(result);
+
+
   });
 
 });
@@ -118,6 +120,8 @@ router.get("/api/child", function(req, res) {
   registration.allChild(function(result) {
 
     res.json(result);
+
+   
   });
 
 });

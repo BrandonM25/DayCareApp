@@ -1,3 +1,5 @@
+ 
+{{#each result}}
  <div class="card card-cascade">
 
                         <!--Card image-->
@@ -13,14 +15,11 @@
                         <div class="card-body text-left childCard" id="childCard1">
                             <!--Title-->
                             <h4 class="card-title">
-                                <strong>First Name: {{first_name}}</strong>
+                                <strong>Parent Name: {{this.result.parent_first_name}} {{this.parent_last_name}}</strong>
                             </h4>
-                            <h4 class="card-title">
-                                <strong>Last Name:{{last_name}}</strong>
-                            </h4>
-                            <h5>Date of Birth:{{birth_date}}</h5>
-                            <h5>Sex:{{sex}}</h5>
-                            <h5>Parent:{{parent1_id}}</h5>
+                            <h5>Child:{{this.child_first_name}} {{this.child_last_name}}</h5>
+
+                            <h5>Date of Birth:{{this.child_bday}}</h5>
                             <a class="btn btn-unique blue accent-1 medBtn">Medical Info</a>
 
                         </div>
@@ -28,7 +27,7 @@
 
                     </div>
 
-                     
+        {{/each}}
 
 
 
@@ -36,23 +35,4 @@
 
 
 
-<!--
-<ul>
-{{#each children}}
-<h1>Medical Information</h1>
-<p>Allergies: {{allergy1}}</p>
-<p>Allergies: {{allergy2}}</p>
-{{/each}}
-</ul>
 
-<div class="card-body text-left childCard" id="childCard1">
-///Title
-<h4 class="card-title"><strong>First Name:</strong></h4>
-<h4 class="card-title"><strong>Last Name:</strong></h4>
-<h5>Date of Birth:</h5>
-<h5>Sex:</h5>
-<h5>Parent:</h5>
-<a class="btn btn-unique blue accent-1 medBtn">Medical Info</a>
-</div>
-
--->

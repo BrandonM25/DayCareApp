@@ -4,6 +4,8 @@ var router = express.Router();
 
 var path = require("path");
 
+var registration = require("../models/children.js");
+
 // Import the model (cat.js) to use its database functions.
 
 
@@ -15,15 +17,24 @@ router.get("/parents", function(req, res) {
 });
 
 router.get("/staff", function(req, res) {
-var obj = {
-  first_name: "Brandon",
-  last_name: "Matthews",
-  birth_date: "12/25/82",
-  sex: "m",
-  parent1_id: "Orlean Matthews"
-};
-  //res.sendFile(path.join(__dirname, "public/staff.html"));
-res.render("staff", obj);
+
+    registration.staff(
+     
+        "Parents.first_name AS parent_first_name", 
+        "Parents.last_name AS parent_last_name", 
+        "children.first_name AS child_first_name", 
+        "children.last_name AS child_last_name", 
+        "children.birth_date AS child_bday",
+        "Parents",
+        "children",
+ 
+
+      function(result) {
+      // Send back the ID of the new quote
+      // res.json(result);
+      res.render('staff', {result: result});
+
+    });
 
 });
 

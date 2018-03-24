@@ -26,6 +26,12 @@ var registration = {
     });
   },
 
+   staff: function(col1,col2,col3,col4,col5,t1,t2,cb) {
+    orm.staffData(col1,col2,col3,col4,col5,t1,t2, function(res) {
+      cb(res);
+    });
+  },
+
 
 
 }

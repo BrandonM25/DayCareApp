@@ -9,6 +9,10 @@ var path = require("path");
 
 var exphbs = require("express-handlebars");
 
+var htmlRoute = require("./routes/html-routes.js");
+
+var apiRoute = require("./routes/api-routes.js");
+
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
@@ -32,7 +36,7 @@ app.set('view engine', 'handlebars');
 var children = ['Sam', 'Susie', 'Paulie']
 
 app.get('/', function(req,res){
-  res.render('home', {
+  res.render('staff', {
   	parent_name: 'susie',
   	child_name: 'sarah',
   	children: children
@@ -40,11 +44,11 @@ app.get('/', function(req,res){
 })
 
 
-app.listen(app.get(PORT), function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + app.get(PORT));
+// app.listen(app.get(PORT), function() {
+//   // Log (server-side) when our server has started
+//   console.log("Server listening on: http://localhost:" + app.get(PORT));
 
-});
+// });
 
 
 // // Dependencies
@@ -61,16 +65,16 @@ app.listen(app.get(PORT), function() {
 // app.set("view engine", "handlebars");
 
 // Data
-var children = [];
+// var children = [];
 
 // Routes
-app.get("/staff.html", function(req, res) {
-    for (var i = 0; i < children.length; i++) {
-        if (children[i].child_id === req.params.child_id) {
-            return res.render("children", children[i]);
-        }
-    }
-});
+// app.get("/staff.html", function(req, res) {
+//     for (var i = 0; i < children.length; i++) {
+//         if (children[i].child_id === req.params.child_id) {
+//             return res.render("children", children[i]);
+//         }
+//     }
+// });
 
 // Initiate the listener.
 //app.listen(port);
@@ -81,11 +85,6 @@ app.get("/staff.html", function(req, res) {
 
 
 // Import routes and give the server access to them.
-
-var htmlRoute = require("./routes/html-routes.js");
-
-var apiRoute = require("./routes/api-routes.js");
-
 
 
 app.use(htmlRoute);

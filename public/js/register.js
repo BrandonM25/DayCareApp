@@ -2,6 +2,8 @@
     $(".submit").on("click", function(event) {
       event.preventDefault();
 
+      
+
       // Here we grab the form elements
       var newParent = {
         password: $('#password').val().trim(),
@@ -83,9 +85,10 @@
         data: newParent
       }).then(
         function(data) {
-          console.log("You are registered ",data);
+          console.log("You are registered ", data);
           // Reload the page to get the updated list
           // location.reload();
+
 
             $.ajax("/api/child", {
             type: "POST",
@@ -109,42 +112,4 @@
       });
 
 
-   //    $.post("/api/register", newChild,
-   //      function(data) {
-
-   //        // If a table is available... tell user they are booked.
-   //        if (data) {
-   //          alert("You are registered");
-   //        }
-
-   //        // If a table is available... tell user they on the waiting list.
-   //        else {
-   //          alert("Sorry you are not registered");
-   //        }
-
-   //        // Clear the form when submitting
-			// $('#password').val(""),
-			// $('#username').val(""),
-			// $("#fparent").val(""),
-			// $("#lparent").val(""),
-			// $("#parentEmail").val(""),
-			// $("#parentNumber").val(""),
-			// $("#parentAddress").val(""),
-			// $("#parentCity").val(""),
-			// $("#parentState").val(""),
-			// $("#parentZip").val(""),
-			// $("#femerg").val(""),
-			// $("#lemerg").val(""),
-			// $("#emergNumber").val(""),
-			// $("#fSpouse").val(""),
-			// $("#lSpouse").val(""),
-			// $("#spouseEmail").val(""),
-			// $("#spouseNumber").val(""),
-			// $("#spouseAddress").val(""),
-			// $("#spouseCity").val(""),
-			// $("#spouseState").val(""),
-			// $("#spouseZip").val("")
-
-   //      });
-
-  
+   
