@@ -331,7 +331,7 @@
                                 <label for="materialFormLoginPasswordEx">Your password</label>
                             </div>
                             <div class="text-center mt-4">
-                                <a href="public/parents.html">
+                                <a href="">
                                     <button class="btn btn-blue accent-1" id="btnLogin" type="submit">Login</button>
                                 </a>
                             </div>
@@ -339,8 +339,8 @@
                                 Or
                             </div>
                             <div class="text-center mt-4">
-                                <a href="public/register.html">
-                                    <button class="btn btn-blue accent-1" id="btnLogin" type="submit">Register</button>
+                                <a href="">
+                                    <button class="btn btn-blue accent-1" id="btnRegister" type="submit">Register</button>
                                 </a>
                             </div>
                         </form>
@@ -422,15 +422,232 @@
                                 <li>Bootstrap</li>
                                 <li>MySQL</li>
                                 <li>NodeJs</li>
-                                <li>Sequelize</li>
+                                <li>Firebase</li>
                                 <li>Handlebars</li>
                                 <li>Express</li>
+                                <li>Twilio</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <div class="row mt-4" id="signUp">
+            <div class="col-md-12">
+                    <form>
+                            <div class="container">
+                                <div class="row mt-4">
+                    
+                                    <div class="col-md-6">
+                                         <div class="form-group">
+                                            <label for="username">Username</label>
+                                            <input type="" id="username" class="form-control" aria-describedby="emailHelp" placeholder="">
+                                        </div>
+                                    </div>
+                    
+                                     <div class="col-md-6">
+                                         <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input type="" id="password" class="form-control" aria-describedby="emailHelp" placeholder="">
+                                        </div>
+                                    </div>
+                    
+                                    <div class="col-md-6">
+                    
+                                        <div class="form-group">
+                                            <label for="fParent">First Name</label>
+                                            <input type="" id="fParent" class="form-control" aria-describedby="emailHelp" placeholder="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lParent">Last Name</label>
+                                            <input type="" class="form-control" id="lParent" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="parentEmail">Email Address</label>
+                                            <input type="" class="form-control" id="parentEmail" placeholder="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="parentNumber">Phone Number</label>
+                                            <input type="" class="form-control" id="parentNumber" placeholder="">
+                                        </div>
+                                    </div>
+                    
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="parentAddress">Address</label>
+                                            <input type="" class="form-control" id="parentAddress" placeholder="">
+                                        </div>
+                                    </div>
+                    
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="parentCity">City</label>
+                                            <input type="" class="form-control" id="parentCity" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="parentState">State</label>
+                                            <input type="" class="form-control" id="parentState" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="parentZip">Zip</label>
+                                            <input type="" class="form-control" id="parentZip" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <p>
+                                            <a class="" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            Do you want to add emergency contacts?
+                                            </a>
+                                        </p>
+                                    
+                                        <div class="collapse" id="collapseExample1">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="femerg">First Name</label>
+                                                        <input type="" class="form-control" id="femerg" aria-describedby="emailHelp" placeholder="">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="lemerg">Last Name</label>
+                                                        <input type="" class="form-control" id="lemerg" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="emergNumber">Phone Number</label>
+                                                        <input type="" class="form-control" id="emergNumber" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <p>
+                                            <a class="" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            Add Child
+                                            </a>
+                                        </p>
+                                    
+                                        <div class="collapse" id="collapseExample3">
+                    
+                                            <div class="row">
+                    
+                                                <div class="col-md-6">
+                                                     <hr>
+                                                    <div class="form-group">
+                                                        <label for="fchild">First Name</label>
+                                                        <input type="" class="form-control" id="fchild" aria-describedby="emailHelp" placeholder="">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="lechild">Last Name</label>
+                                                        <input type="" class="form-control" id="lchild" placeholder="">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="birthDate">Birth Date</label>
+                                                        <input type="" class="form-control" id="birthDate" placeholder="">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="sexChild">sex</label>
+                                                        <input type="" class="form-control" id="sexChild" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                     <hr>
+                                                    <div class="form-group">
+                                                        <label for="allergy1">allergies</label>
+                                                        <input type="" class="form-control" id="allergy1" placeholder="">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="allergy2">allergies</label>
+                                                        <input type="" class="form-control" id="allergy2" placeholder="">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="allergy3">allergies</label>
+                                                        <input type="" class="form-control" id="allergy3" placeholder="">
+                                                    </div>
+                                                     <div class="form-group">
+                                                        <label for="parent1_id">Parent Unique ID</label>
+                                                        <input type="" class="form-control" id="parent1_id" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <hr>
+                                        <p>
+                                            <a class="" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            Do you want to add your spouse?
+                                            </a>
+                                        </p>
+                                        <hr>
+                                        <div class="collapse" id="collapseExample">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                    
+                                                    <div class="form-group">
+                                                        <label for="fSpouse">First Name</label>
+                                                        <input type="" class="form-control" id="fSpouse" aria-describedby="emailHelp" placeholder="">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="lSpouse">Last Name</label>
+                                                        <input type="" class="form-control" id="lSpouse" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="spouseEmail">Email Address</label>
+                                                        <input type="" class="form-control" id="spouseEmail" placeholder="">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="spouseNumber">Phone Number</label>
+                                                        <input type="" class="form-control" id="spouseNumber" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="spouseAddress">Address</label>
+                                                        <input type="" class="form-control" id="spouseAddress" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="spouseCity">City</label>
+                                                        <input type="" class="form-control" id="spouseCity" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="spouseState">State</label>
+                                                        <input type="" class="form-control" id="spouseState" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="spouseZip">Zip</label>
+                                                        <input type="" class="form-control" id="spouseZip" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-primary submit">Submit</button>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </form>
+            </div>
+        </div>
     </div>
 
 
@@ -455,8 +672,67 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
-    <!-- Landing page Javascript -->
-    <script type="text/javascript" src="public/js/logic.js"></script>
+    <script>
+        new WOW().init();
+        $(document).ready(function () {
+
+            $("#staffLogIn").css("display", "none");
+            $("#parentsLogIn").css("display", "none");
+            $("#purpose").css("display", "none");
+            $("#motivation").css("display", "none");
+            $("#components").css("display", "none");
+            $("#designProcess").css("display", "none");
+            $("#technologies").css("display", "none");
+            $("#signUp").css("display", "none");
+
+        });
+
+        $("#staffBtn").on('click', function () {
+
+            $("#mainHeading").replaceWith(jQuery("#staffLogIn"));
+            $("#staffLogIn").css("display", "");
+        });
+
+        $("#parentsBtn").on('click', function () {
+
+            $("#mainHeading").replaceWith(jQuery("#parentsLogIn"));
+            $("#parentsLogIn").css("display", "");
+        });
+
+        $("btnRegister").on('click', function(){
+            $("#mainHeading").replaceWith(jQuery("#signUp"));
+            $("#signUp").css("display", "");
+        });
+
+        $("#aboutTab").on('click', function () {
+            $("#mainHeading").replaceWith(jQuery("#purpose"));
+            $("#purpose").css("display", "");
+        });
+
+        $("#next1").on('click', function () {
+            $("#purpose").replaceWith(jQuery("#motivation"));
+            $("#motivation").css("display", "");
+        });
+
+        $("#next2").on('click', function () {
+            $("#motivation").replaceWith(jQuery("#components"));
+            $("#components").css("display", "");
+        });
+
+        $("#next3").on('click', function () {
+            $("#components").replaceWith(jQuery("#designProcess"));
+            $("#designProcess").css("display", "");
+        });
+
+        $("#next4").on('click', function () {
+            $("#designProcess").replaceWith(jQuery("#technologies"));
+            $("#technologies").css("display", "");
+        });
+
+
+
+
+    </script>
     <!--Scripts-->
 </body>
 

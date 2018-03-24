@@ -24,7 +24,8 @@
     "express-handlebars": "^3.0.0",
     "mocha": "^5.0.4",
     "mysql": "^2.15.0",
-    "nodemon": "^1.17.2"
+    "nodemon": "^1.17.2",
+    "twilio": "^3.14.0"
   },
   "devDependencies": {},
   "keywords": []
