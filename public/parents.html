@@ -1,2 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parent's Portal</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="../public/css/bootstrap.min.css" rel="stylesheet">
+       <!--<link href="../public/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- Material Design Bootstrap -->
+    <link href="../public/css/mdb.min.css" rel="stylesheet">
+    <!-- JQuery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <!-- Our custom styles -->
+    <style>
+        /* general */
+.container {
+  height: 250px
+  width: 500px;
+  margin: 0px;
+  clear: both;
+  }
+
+/* main */
+
+#main-container {
+  padding-top: 15px;
+  margin: 5px;
+}
+
+.main-section {
+  float: center;
+  width: 950px;
+  padding: 0px;
+  margin: 0px 300px auto;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+ p { 
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+  h2 { 
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+body {
+  background: whitesmoke;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.avatar-upload {
+  position: relative;
+  max-width: 205px;
+  margin: 50px auto;
+}
+.avatar-upload .avatar-edit {
+  position: absolute;
+  right: 12px;
+  z-index: 1;
+  top: 10px;
+}
+.avatar-upload .avatar-edit input {
+  display: none;
+}
+.avatar-upload .avatar-edit input + label {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 0;
+  border-radius: 100%;
+  background: #FFFFFF;
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+}
+.avatar-upload .avatar-edit input + label:hover {
+  background: #f1f1f1;
+  border-color: #d6d6d6;
+}
+.avatar-upload .avatar-edit input + label:after {
+  content: "\f040";
+  font-family: 'FontAwesome';
+  color: #757575;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+}
+.avatar-upload .avatar-preview {
+  width: 192px;
+  height: 192px;
+  position: relative;
+  border-radius: 100%;
+  border: 6px solid #F8F8F8;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.avatar-upload .avatar-preview > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+    </style>
+</head>
+
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark indigo">
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><strong>Child | Profile</strong></a>
+                </li>
+            </ul>
+            <!-- Links -->
+    </nav>
+
+<!-- Child Profile for 1st child-->
+<div id="main-container" class="container"> 
+  <section class="main-section">   
+    <div class="avatar-upload">
+        <div class="avatar-edit">
+            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+            <label for="imageUpload"></label>
+        </div>
+        <div class="avatar-preview">
+            <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);">
+            </div>
+        </div>
+    <!--Close Class=avatar-upload-->    
+    </div>
+
+    <form>
+        <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="" id="fchild" class="form-control" aria-describedby="emailHelp" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+                <label for="sexChild">Gender</label>
+                <input type="" id="sexChild" class="form-control" aria-describedby="emailHelp" placeholder="Gender" required>
+            </div>
+            </div>
+
+            <div class="col-md-6">
+            <div class="form-group">
+                <label for="lChild">Last Name</label>
+                <input type="" id="lChild" class="form-control" aria-describedby="emailHelp" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+                <label for="birthDate">Date of Birth</label>
+                <input type="" class="form-control" id="birthDate" placeholder="MM/DD/YYYY" required>
+            </div>
+            </div>
+
+            <!-- Future developement -->
+            <div class="col-md-6">
+            <div class="form-group">
+                <label for="nickname">Nickname</label>
+                <input type="" class="form-control" id="nickname" placeholder="Nickname" required >
+            </div>
+            </div>
+            <div class="col-md-6">
+            <div class="form-group">
+                <label for="color">Grade</label>
+                <input type="" class="form-control" id="color" placeholder="Pre-K">
+            </div>
+            </div>
+
+            <div class="col-md-4">
+            <div class="form-group">
+                <label for="toy">Favorite Toy</label>
+                <input type="" class="form-control" id="toy" placeholder="Blue Race Car">
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group">
+                <label for="color">Favorite Color</label>
+                <input type="" class="form-control" id="color" placeholder="Green">
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group">
+                <label for="funfact">Fun Fact</label>
+                <input type="" class="form-control" id="funfact" placeholder="I speak four languages">
+            </div>
+            </div>
+
+            <div class="col-md-12">
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Special Notes:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            </div>
+        <!-- Close Class=Row-->
+        </div>
+        <!-- Close Class=Container-->
+    </div>
+    </form>
+    </section>
+</div>
+
+
+<!--Parent Info-->
+<div id="main-container" class="container"> 
+    <section class="main-section">
+        <br>
+     <p>
+        Parent Information
+     </p>
+     <br>
+    <form>
+        <div class="container">
+        <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="fParent">First Name</label>
+                        <input type="" id="fParent" class="form-control" aria-describedby="emailHelp" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="lParent">Last Name</label>
+                        <input type="" class="form-control" id="lParent" placeholder="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="parentEmail">Email Address</label>
+                        <input type="" class="form-control" id="parentEmail" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="parentNumber">Phone Number</label>
+                        <input type="" class="form-control" id="parentNumber" placeholder="">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="parentAddress">Address</label>
+                        <input type="" class="form-control" id="parentAddress" placeholder="">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="parentCity">City</label>
+                        <input type="" class="form-control" id="parentCity" placeholder="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="parentState">State</label>
+                        <input type="" class="form-control" id="parentState" placeholder="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="parentZip">Zip</label>
+                        <input type="" class="form-control" id="parentZip" placeholder="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <p1>
+                        <a class="" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Do you want to add emergency contacts?
+                        </a>
+                    </p1>
+                        <div class="collapse" id="collapseExample1">
+                        <div class="row">
+                            <div class="col-md-6">
+                            <div class="form-group">
+                                    <label for="femerg">First Name</label>
+                                    <input type="" class="form-control" id="femerg" aria-describedby="emailHelp" placeholder="">
+                                </div>
+                            </div>
+                                <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="lemerg">Last Name</label>
+                                    <input type="" class="form-control" id="lemerg" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                            <div class="form-group">
+                                    <label for="emergNumber">Phone Number</label>
+                                    <input type="" class="form-control" id="emergNumber" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+</div>
+
+<div id="main-container" class="container"> 
+<section class="main-section">
+<!--<section class= "sidebar">-->
+    <br>
+      <h2>Medical Information</h2>
+      <br>
+        <form>
+        <div class="container">
+        <div class="row">
+            <!-- Future Developement-->
+            <div class="col-md-6">
+            <div class="form-group">
+                <label for="drName">Doctor's Name</label>
+                <input type="" id="drName" class="form-control" aria-describedby="emailHelp" placeholder="Dr. Sarah Black" required>
+            </div>
+            </div>
+
+            <div class="col-md-6">
+            <div class="form-group">
+                <label for="drNum">Doctor's Number</label>
+                <input type="" id="drNum" class="form-control" aria-describedby="emailHelp" placeholder="(404) 555-5555" required>
+            </div>
+            </div>
+
+            <div class="col-md-6">
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Pre-existing Conditions:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            </div>
+            <div class="col-md-6">
+            <div class="form-group">
+                <label for="exampleFormControlTextarea2">Medications:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea2" rows="3" placeholder="Pol Vi Sol"></textarea>
+            </div>
+            </div>
+            <!-- Data captured in Database -->
+               <div class="col-md-5">
+                  <div class="form-group">
+                  <label for="allergy1">Allergies:</label>
+                  <textarea class="form-control" id="allergy1" rows="3" placeholder="Shell fish"></textarea>
+                </div>
+              </div>
+            <div class="col-md-5">
+                  <div class="form-group">
+                  <label for="allergy2">Allergies:</label>
+                  <textarea class="form-control" id="allergy2" rows="3"></textarea>
+                </div>
+              </div>
+            <div class="col-md-5">
+                  <div class="form-group">
+                  <label for="allergy3">Allergies:</label>
+                  <textarea class="form-control" id="allergy3" rows="3"></textarea>
+                </div>
+              </div>
+          </div>
+      </div>
+  </form>
+  <div class="col-md-4">
+            <button type="save" class="btn btn-primary submit">Save</button>
+        </div>
+</section>
+</div>
+</div>
+                 
+<!-- Additional Child
+<div id="main-container" class="container"> 
+    <section class="main-section">
+        <div class="col-md-12">
+            <p>
+                <a class="" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Add Another Child
+                </a>
+            </p> 
+        <div class="collapse" id="collapseExample1">
+        <div class="row">  
+            <div class="avatar-upload">
+            <div class="avatar-edit">
+                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                <label for="imageUpload"></label>
+            </div>
+            <div class="avatar-preview">
+            <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);">
+            </div>
+            </div>
+            </div>
+
+    <form>
+        <div class="container-child">
+        <div class="row">
+            <div class="col-md-6">
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="" id="fchild" class="form-control" aria-describedby="emailHelp" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+                <label for="sexChild">Gender</label>
+                <input type="" id="sexChild" class="form-control" aria-describedby="emailHelp" placeholder="Gender" required>
+            </div>
+            </div>
+
+            <div class="col-md-6">
+            <div class="form-group">
+                <label for="lChild">Last Name</label>
+                <input type="" id="lChild" class="form-control" aria-describedby="emailHelp" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+                <label for="birthDate">Date of Birth</label>
+                <input type="" class="form-control" id="birthDate" placeholder="MM/DD/YYYY" required>
+            </div>
+            </div>-->
+
+            <!--Future developement
+            <div class="col-md-6">
+            <div class="form-group">
+                <label for="nickname">Nickname</label>
+                <input type="" class="form-control" id="nickname" placeholder="Nickname" required >
+            </div>
+            </div>
+            <div class="col-md-6">
+            <div class="form-group">
+                <label for="color">Grade</label>
+                <input type="" class="form-control" id="color" placeholder="Pre-K">
+            </div>
+            </div>
+
+            <div class="col-md-4">
+            <div class="form-group">
+                <label for="toy">Favorite Toy</label>
+                <input type="" class="form-control" id="toy" placeholder="Blue Race Car">
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group">
+                <label for="color">Favorite Color</label>
+                <input type="" class="form-control" id="color" placeholder="Green">
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group">
+                <label for="funfact">Fun Fact</label>
+                <input type="" class="form-control" id="funfact" placeholder="I speak four languages">
+            </div>
+            </div>
+
+            <div class="col-md-12">
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Special Notes:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            </div>
+        </div>
+    </form>
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-primary submit">Save</button>
+        </div>
+    </section>
+</div>
+</form>
+</div>
+</div>
+</div>-->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="js/register.js"></script>
+
+<script type="text/javascript" src="/parent.js"></script>
+<script>
+    new WOW().init();
+$(document).ready(function () {
+
+    $("#staffLogIn").css("display", "none");
+    $("#parentsLogIn").css("display", "none");
+    $("#purpose").css("display", "none");
+    $("#motivation").css("display", "none");
+    $("#components").css("display", "none");
+    $("#designProcess").css("display", "none");
+    $("#technologies").css("display", "none");
+
+});
+
+$("#staffBtn").on('click', function () {
+
+    $("#mainHeading").replaceWith(jQuery("#staffLogIn"));
+    $("#staffLogIn").css("display", "");
+});
+
+$("#parentsBtn").on('click', function () {
+
+    $("#mainHeading").replaceWith(jQuery("#parentsLogIn"));
+    $("#parentsLogIn").css("display", "");
+});
+
+$("#btnLogin1").on('click', function(){
+
+    $("#parentsLogIn").replaceWith(jQuery("#signUp"));
+    $("signUp").css("display", "");
+});
+
+$("#btnLogin2").on('click', function(){
+
+    $("#mainHeading").replaceWith(jQuery("#main-container"));
+    $("main-container").css("display", "");
+});
+
+$("#aboutTab").on('click', function () {
+    $("#mainHeading").replaceWith(jQuery("#purpose"));
+    $("#purpose").css("display", "");
+});
+
+$("#next1").on('click', function () {
+    $("#purpose").replaceWith(jQuery("#motivation"));
+    $("#motivation").css("display", "");
+});
+
+$("#next2").on('click', function () {
+    $("#motivation").replaceWith(jQuery("#components"));
+    $("#components").css("display", "");
+});
+
+$("#next3").on('click', function () {
+    $("#components").replaceWith(jQuery("#designProcess"));
+    $("#designProcess").css("display", "");
+});
+
+$("#next4").on('click', function () {
+    $("#designProcess").replaceWith(jQuery("#technologies"));
+    $("#technologies").css("display", "");
+});
+
+
+
+</script>
+</body>
+
+</html>
+  
 
 
