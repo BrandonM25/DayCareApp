@@ -44,11 +44,7 @@ app.get('/', function(req,res){
 })
 
 
-// app.listen(app.get(PORT), function() {
-//   // Log (server-side) when our server has started
-//   console.log("Server listening on: http://localhost:" + app.get(PORT));
 
-// });
 
 
 // // Dependencies
@@ -100,4 +96,9 @@ app.listen(PORT, function() {
 
 });
 
+//app.listen(app.get(PORT), function() {
+  // Log (server-side) when our server has started
+  //console.log("Server listening on: http://localhost:" + app.get(PORT));
+
+//});
 
